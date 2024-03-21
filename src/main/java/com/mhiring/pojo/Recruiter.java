@@ -31,7 +31,7 @@ public class Recruiter{
 	private String expertise;
 
 	@JoinColumn(name = "user_id", unique = true)
-    @OneToOne(targetEntity = User.class, cascade = CascadeType.ALL)
+        @OneToOne(targetEntity = User.class, cascade = CascadeType.ALL)
 	private User user;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="recruiter", fetch = FetchType.EAGER)
