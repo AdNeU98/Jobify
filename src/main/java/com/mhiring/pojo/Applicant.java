@@ -36,7 +36,7 @@ public class Applicant {
 	private long applicantID;
 	
 	@JoinColumn(name = "user_id", unique = true)
-    @OneToOne(targetEntity = User.class, cascade = CascadeType.ALL)
+        @OneToOne(targetEntity = User.class, cascade = CascadeType.ALL)
 	private User user;
 	
 	@OneToMany(mappedBy="appDetails", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
