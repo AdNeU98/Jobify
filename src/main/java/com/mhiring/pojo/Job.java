@@ -51,8 +51,8 @@ public class Job {
 	@Size(max = 200, message = "Location is too large, maximum 200 characters")
 	private String location;
 	
-    @ManyToOne
-    @JoinColumn(name = "recruiter_id")
+        @ManyToOne
+        @JoinColumn(name = "recruiter_id")
 	private Recruiter recruiter;   
         
 	@OneToMany(mappedBy="jobDetails", fetch = FetchType.EAGER)
