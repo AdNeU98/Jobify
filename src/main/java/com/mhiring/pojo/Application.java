@@ -22,12 +22,12 @@ public class Application {
 	@Column(name = "status")
 	private String appStatus;
 	
-    @ManyToOne(cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "job_id")
+    	@ManyToOne(cascade = CascadeType.REFRESH)
+    	@JoinColumn(name = "job_id")
 	private Job jobDetails;
 	
-    @ManyToOne
-    @JoinColumn(name = "applicant_id")
+    	@ManyToOne
+    	@JoinColumn(name = "applicant_id")
 	private Applicant appDetails;
 
 	public Application() {}
